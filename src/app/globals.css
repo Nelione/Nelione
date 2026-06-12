@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Color palette (from Nelione mockup) ── */
+  --color-cream: #f5f2ed;
+  --color-ink: #111110;
+  --color-mid: #6b6b69;
+  --color-border: #e2ddd6;
+  --color-sand: #b8a898;
+
+  /* shadcn-style semantic tokens mapped onto the gallery palette */
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-ink);
+  --color-muted: var(--color-border);
+  --color-muted-foreground: var(--color-mid);
+  --color-primary: var(--color-ink);
+  --color-primary-foreground: var(--color-cream);
+  --color-accent: var(--color-sand);
+  --color-border-default: var(--color-border);
+  --color-ring: var(--color-sand);
+
+  /* ── Typography ── */
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* ── Letter spacing scale used heavily by the gallery aesthetic ── */
+  --tracking-gallery: 0.18em;
+  --tracking-gallery-wide: 0.25em;
+  --tracking-gallery-widest: 0.35em;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-weight: 300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: var(--tracking-gallery);
+    text-transform: uppercase;
+  }
+}
+
+@layer utilities {
+  .text-eyebrow {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 0.68rem;
+    letter-spacing: var(--tracking-gallery-wide);
+    text-transform: uppercase;
+    color: var(--color-mid);
+  }
+
+  .btn-gallery {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: var(--tracking-gallery-wide);
+    text-transform: uppercase;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
