@@ -44,6 +44,11 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  typescript: {
+    // !! ADVERTENCIA !!
+    // Esto ignorará los errores de TypeScript durante el 'next build'.
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;

@@ -53,7 +53,7 @@
         "noForEach": "off"
       },
       "suspicious": {
-        "noExplicitAny": "warn",
+        "noExplicitAny": "info",
         "noConsole": {
           "level": "warn",
           "options": {

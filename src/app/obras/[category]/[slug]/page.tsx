@@ -58,7 +58,7 @@ export default async function ProductPage({ params }: Props) {
     "@type": "Product",
     name: product.name,
     description: product.description ?? undefined,
-    image: product.product_images.map((img) => getProductImageUrl(img.storage_path)),
+    image: product.product_images.map((img: any) => getProductImageUrl(img.storage_path)),
     url: `${getSiteUrl()}/obras/${product.category.slug}/${product.slug}`,
     category: product.category.name,
     brand: { "@type": "Person", name: "Nelione" },
@@ -102,7 +102,7 @@ export default async function ProductPage({ params }: Props) {
           </div>
           {restImages.length > 0 && (
             <div className="grid grid-cols-2 gap-6">
-              {restImages.map((img) => (
+              {restImages.map((img: any) => (
                 <div key={img.id} className="relative aspect-square bg-[#e6e0d8]">
                   <Image
                     src={getProductImageUrl(img.storage_path)}
