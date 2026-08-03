@@ -60,7 +60,6 @@ function toRow(data: ReturnType<typeof productSchema.parse>) {
 
 function revalidateCatalog(categorySlug?: string, productSlug?: string) {
   revalidatePath("/obras");
-  revalidatePath("/coleccion");
   if (categorySlug) {
     revalidatePath(`/obras/${categorySlug}`);
     if (productSlug) revalidatePath(`/obras/${categorySlug}/${productSlug}`);

@@ -26,16 +26,22 @@ export default function HomePage() {
           <source src="/entrada.mp4" type="video/mp4" />
         </video>
       </div>
-
-      <h1 className="text-center font-display text-[clamp(2.8rem,8vw,5rem)] font-bold leading-none tracking-[0.18em]">
-        Nelione
-      </h1>
-      <p className="mb-11 mt-2 text-center font-display text-[clamp(0.75rem,2vw,0.9rem)] font-light uppercase tracking-[0.35em] text-mid">
-        Feel Create Repeat
-      </p>
+      
+      <div className="mx-auto max-w-xl px-8 pb-10 text-center">
+        <div className="mx-auto mb-8 h-px w-8 bg-sand" aria-hidden="true" />
+        <p className="mb-12 text-sm font-light leading-[1.95] text-[#555553]">
+          Una colección sobre los ciclos del cuerpo y la mente. Sentir, crear, repetir — como
+          respirar, como vivir.
+          <br />
+          <br />
+          Cada obra es un instante atrapado en ese bucle: el rosa que regresa, la forma que muta
+          sin perder su esencia. Pintura, escultura y lámina conviven en un mismo diálogo, íntimo
+          y universal.
+        </p>
+      </div>
 
       <Button asChild variant="outline">
-        <Link href="/coleccion">Entrar</Link>
+        <Link href="/obras">Entrar</Link>
       </Button>
     </section>
   );

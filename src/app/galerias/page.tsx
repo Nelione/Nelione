@@ -24,7 +24,7 @@ export default function GaleriasPage() {
       </header>
 
       {/* Carta de presentación — sustituir por el texto definitivo del artista */}
-      <div className="mb-16 space-y-6 text-sm font-light leading-[1.95] text-[#555553]">
+      <div className="mb-16 space-y-6 text-sm font-light leading-[1.95] text-center text-[#555553]">
         <p>
           Mi trabajo explora los ciclos del cuerpo y la mente a través de la pintura, la
           escultura y la obra gráfica. La colección actual, <em>Feel Create Repeat</em>, reúne

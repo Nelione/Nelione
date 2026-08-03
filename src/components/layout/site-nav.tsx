@@ -2,7 +2,6 @@ import Link from "next/link";
 import { readCart } from "@/lib/actions/cart";
 
 const NAV_LINKS = [
-  { href: "/coleccion", label: "Colección" },
   { href: "/obras", label: "Obras" },
   { href: "/sobre-el-artista", label: "El artista" },
   { href: "/galerias", label: "Galerías" },
