@@ -3,6 +3,7 @@ import { Barlow_Condensed, Inter } from "next/font/google";
 import type * as React from "react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteNav } from "@/components/layout/site-nav";
+import { SiteJsonLd } from "@/components/seo/site-json-ld";
 import { getSiteUrl } from "@/lib/utils";
 import "./globals.css";
 
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={`${display.variable} ${body.variable}`}>
       <body className="flex min-h-dvh flex-col antialiased">
+        <SiteJsonLd />
         <SiteNav />
         <main className="flex-1 pt-[73px]">{children}</main>
         <SiteFooter />
